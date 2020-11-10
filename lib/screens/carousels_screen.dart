@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
 import 'package:tj_carousel_slider/widgets/android_dropdown.dart';
 import 'package:tj_carousel_slider/widgets/avatars_list.dart';
 
@@ -28,6 +26,7 @@ class CarouselsScreen extends StatelessWidget {
                     fontSize: 40.0,
                   ),
                 ),
+                SizedBox(height: 10.0),
                 Container(
                   height: 150.0,
                   alignment: Alignment.center,

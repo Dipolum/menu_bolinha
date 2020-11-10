@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:tj_carousel_slider/models/avatarstyle.dart';
 
 class AvatarStyleData extends ChangeNotifier {
@@ -24,9 +25,61 @@ class AvatarStyleData extends ChangeNotifier {
 }
 
 final Map<String, AvatarStyle> _avatarStyles = {
-  'Magalu': AvatarStyle(),
-  'MyStyle2': AvatarStyle(fontSize: 30.0),
-  'MyStyle3': AvatarStyle(),
-  'MyStyle4': AvatarStyle(),
-  'MyStyle5': AvatarStyle(),
+  'Magalu': AvatarStyle(
+    outerHorizontalPadding: 11,
+    outerVerticalPadding: 9.0,
+    innerPadding: 8.0,
+    radius: 32,
+    borderRadius: 0,
+    textStyle: TextStyle(
+      // fontWeight: FontWeight.bold,
+      // fontFamily: 'SourceSansPro',
+      fontSize: 14.0,
+    ),
+  ),
+  'Instagram': AvatarStyle(
+    outerHorizontalPadding: 9,
+    outerVerticalPadding: 6.0,
+    innerPadding: 5.0,
+    radius: 32,
+    borderRadius: 3,
+    borderColor: Colors.deepOrangeAccent,
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Fira-Mono',
+      fontSize: 13.0,
+    ),
+  ),
+  'Snapchat': AvatarStyle(
+    outerHorizontalPadding: 6,
+    outerVerticalPadding: 6.0,
+    innerPadding: 5.0,
+    radius: 28,
+    borderRadius: 3,
+    borderColor: Colors.deepPurpleAccent,
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'SourceSansPro',
+      fontSize: 12.0,
+    ),
+  ),
+  'Dipolum1': AvatarStyle(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Fira-Mono',
+    ),
+    borderColor: Colors.deepPurple,
+  ),
+  'Dipolum2': AvatarStyle(
+    radius: 40.0,
+    innerPadding: 10.0,
+    borderRadius: 5.0,
+    outerHorizontalPadding: 9.5,
+    borderColor: Colors.deepPurple,
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 15.0,
+      fontFamily: 'Fira-Mono',
+    ),
+  ),
 };

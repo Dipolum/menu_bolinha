@@ -24,6 +24,7 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         home: CarouselsScreen(),
+        theme: ThemeData(fontFamily: 'Roboto'),
       ),
     );
   }

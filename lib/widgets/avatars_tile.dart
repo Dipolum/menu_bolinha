@@ -22,28 +22,32 @@ class AvatarTile extends StatelessWidget {
         children: [
           GestureDetector(
             child: Padding(
-              padding: EdgeInsets.all(avatarStyle.outerPadding),
+              padding: EdgeInsets.symmetric(
+                  horizontal: avatarStyle.outerHorizontalPadding,
+                  vertical: avatarStyle.outerVerticalPadding),
               child: CircleAvatar(
-                child: Padding(
-                  padding: EdgeInsets.all(avatarStyle.innerPadding),
-                  child: Image(
-                    image: image,
+                backgroundColor: avatarStyle.borderColor,
+                radius: avatarStyle.radius,
+                child: CircleAvatar(
+                  child: Padding(
+                    padding: EdgeInsets.all(avatarStyle.innerPadding),
+                    child: Image(
+                      image: image,
+                    ),
                   ),
+                  backgroundColor: avatarStyle.backgroundColor,
+                  radius: avatarStyle.radius - avatarStyle.borderRadius,
                 ),
-                backgroundColor: avatarStyle.backgroundColor,
-                minRadius: avatarStyle.minSize,
-                maxRadius: avatarStyle.maxSize,
               ),
             ),
             onTap: () {
               NetworkHelper(url: url).launchURL();
             },
           ),
-          SizedBox(height: 5),
+          SizedBox(height: avatarStyle.marginBtwnTextAndImage),
           Text(
             title,
-            style:
-                TextStyle(color: Colors.black, fontSize: avatarStyle.fontSize),
+            style: avatarStyle.textStyle,
           ),
         ],
       ),
