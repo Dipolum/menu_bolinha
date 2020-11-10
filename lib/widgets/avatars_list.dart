@@ -28,6 +28,7 @@ List<AvatarTile> buildList(BuildContext context) {
   for (var item in Provider.of<AvatarData>(context).avatars) {
     myAvatars.add(AvatarTile(
       title: item.title,
+      image: item.image,
     ));
   }
   return myAvatars;

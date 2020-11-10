@@ -7,8 +7,11 @@ class CarouselsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Toritama Jeans slider display')),
-      backgroundColor: Colors.teal,
+      appBar: AppBar(
+        title: Text('Toritama Jeans slider display'),
+        backgroundColor: Colors.blueGrey,
+      ),
+      backgroundColor: Colors.grey[350],
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,34 +1,43 @@
 import 'package:flutter/material.dart';
 
 class AvatarTile extends StatelessWidget {
-  final title;
-  final url;
+  final String title;
+  final String url;
+  final AssetImage image;
 
-  const AvatarTile({Key key, this.title = '', this.url}) : super(key: key);
+  const AvatarTile({Key key, this.title = '', this.url, this.image})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 3.0),
-      color: Colors.red,
+      //color: Colors.red,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           GestureDetector(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5.0),
+              padding: const EdgeInsets.all(9.0),
               child: CircleAvatar(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image(
+                    image: image,
+                  ),
+                ),
+                backgroundColor: Colors.white,
                 minRadius: 30.0,
                 maxRadius: 40.0,
               ),
             ),
             onTap: () {
-              print(url);
+              print(title);
             },
           ),
-          SizedBox(height: 7),
+          SizedBox(height: 5),
           Text(
             title,
-            style: TextStyle(color: Colors.lightBlueAccent),
+            style: TextStyle(color: Colors.black),
           ),
         ],
       ),
