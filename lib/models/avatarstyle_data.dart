@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:tj_carousel_slider/models/avatarstyle.dart';
 
 class AvatarStyleData extends ChangeNotifier {
-  String _selectedStyleKey = 'MyStyle1';
+  String _selectedStyleKey = 'Magalu';
 
   AvatarStyle getAvatarStyle() {
     return getAvatarStyleData()[_selectedStyleKey];
@@ -24,7 +24,7 @@ class AvatarStyleData extends ChangeNotifier {
 }
 
 final Map<String, AvatarStyle> _avatarStyles = {
-  'MyStyle1': AvatarStyle(),
+  'Magalu': AvatarStyle(),
   'MyStyle2': AvatarStyle(fontSize: 30.0),
   'MyStyle3': AvatarStyle(),
   'MyStyle4': AvatarStyle(),

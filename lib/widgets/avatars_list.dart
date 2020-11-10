@@ -29,6 +29,7 @@ List<AvatarTile> buildList(BuildContext context) {
     myAvatars.add(AvatarTile(
       title: item.title,
       image: item.image,
+      url: item.targetUrl,
     ));
   }
   return myAvatars;

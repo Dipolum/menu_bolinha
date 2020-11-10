@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
+import 'package:tj_carousel_slider/services/networking.dart';
 
 class AvatarTile extends StatelessWidget {
   final String title;
   final String url;
   final AssetImage image;
 
-  const AvatarTile({Key key, this.title = '', this.url, this.image})
+  const AvatarTile({Key key, this.title, this.url, this.image})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -21,10 +22,10 @@ class AvatarTile extends StatelessWidget {
         children: [
           GestureDetector(
             child: Padding(
-              padding: const EdgeInsets.all(9.0),
+              padding: EdgeInsets.all(avatarStyle.outerPadding),
               child: CircleAvatar(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(avatarStyle.innerPadding),
                   child: Image(
                     image: image,
                   ),
@@ -35,7 +36,7 @@ class AvatarTile extends StatelessWidget {
               ),
             ),
             onTap: () {
-              print(title);
+              NetworkHelper(url: url).launchURL();
             },
           ),
           SizedBox(height: 5),
