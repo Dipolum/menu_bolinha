@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
 
 class AvatarTile extends StatelessWidget {
   final String title;
@@ -9,6 +11,8 @@ class AvatarTile extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    var avatarStyle = Provider.of<AvatarStyleData>(context).getAvatarStyle();
+
     return Container(
       padding: EdgeInsets.only(top: 3.0),
       //color: Colors.red,
@@ -25,9 +29,9 @@ class AvatarTile extends StatelessWidget {
                     image: image,
                   ),
                 ),
-                backgroundColor: Colors.white,
-                minRadius: 30.0,
-                maxRadius: 40.0,
+                backgroundColor: avatarStyle.backgroundColor,
+                minRadius: avatarStyle.minSize,
+                maxRadius: avatarStyle.maxSize,
               ),
             ),
             onTap: () {
@@ -37,7 +41,8 @@ class AvatarTile extends StatelessWidget {
           SizedBox(height: 5),
           Text(
             title,
-            style: TextStyle(color: Colors.black),
+            style:
+                TextStyle(color: Colors.black, fontSize: avatarStyle.fontSize),
           ),
         ],
       ),

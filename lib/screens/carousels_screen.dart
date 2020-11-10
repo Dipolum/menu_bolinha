@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
+import 'package:tj_carousel_slider/widgets/android_dropdown.dart';
 import 'package:tj_carousel_slider/widgets/avatars_list.dart';
 
 class CarouselsScreen extends StatelessWidget {
@@ -32,7 +33,7 @@ class CarouselsScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   padding: EdgeInsets.only(bottom: 20.0),
                   color: Colors.blueGrey,
-                  child: iOSPicker(context),
+                  child: androidDropdown(context),
                 ),
               ],
             ),
@@ -43,27 +44,27 @@ class CarouselsScreen extends StatelessWidget {
   }
 }
 
-CupertinoPicker iOSPicker(BuildContext context) {
-  var styleDataArray =
-      Provider.of<AvatarStyleData>(context).getAvatarStyleData();
+// CupertinoPicker iOSPicker(BuildContext context) {
+//   var styleDataArray =
+//       Provider.of<AvatarStyleData>(context).getAvatarStyleData();
 
-  List<Text> pickerItems = [];
+//   List<Text> pickerItems = [];
 
-  for (var item in styleDataArray.values) {
-    pickerItems.add(
-      Text(item.styleName),
-    );
-  }
+//   for (var item in styleDataArray.values) {
+//     pickerItems.add(
+//       Text(item.styleName),
+//     );
+//   }
 
-  return CupertinoPicker(
-    //backgroundColor: Colors.lightBlue,
-    itemExtent: 32.0,
-    onSelectedItemChanged: (selectedIndex) {
-      print(selectedIndex);
+//   return CupertinoPicker(
+//     //backgroundColor: Colors.lightBlue,
+//     itemExtent: 32.0,
+//     onSelectedItemChanged: (selectedIndex) {
+//       print(selectedIndex);
 
-      // Provider.of<AvatarStyleData>(context, listen: false)
-      //     .updateSelectedStyleKey(styleDataArray[selectedIndex].styleName);
-    },
-    children: pickerItems,
-  );
-}
+//       // Provider.of<AvatarStyleData>(context, listen: false)
+//       //     .updateSelectedStyleKey(styleDataArray[selectedIndex].styleName);
+//     },
+//     children: pickerItems,
+//   );
+// }

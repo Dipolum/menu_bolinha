@@ -1,12 +1,15 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/rendering.dart';
 import 'package:tj_carousel_slider/models/avatarstyle.dart';
 
 class AvatarStyleData extends ChangeNotifier {
-  String _selectedStyleKey;
+  String _selectedStyleKey = 'MyStyle1';
 
   AvatarStyle getAvatarStyle() {
     return getAvatarStyleData()[_selectedStyleKey];
+  }
+
+  String getSelectedStyleKey() {
+    return _selectedStyleKey;
   }
 
   void updateSelectedStyleKey(String selectedStyleKey) {
@@ -16,27 +19,14 @@ class AvatarStyleData extends ChangeNotifier {
   }
 
   Map<String, AvatarStyle> getAvatarStyleData() {
-    Map<String, AvatarStyle> avatarStyleData = {};
-
-    for (var avatarStyle in _avatarstyles) {
-      avatarStyleData[avatarStyle.styleName] = avatarStyle;
-    }
-
-    return avatarStyleData;
+    return _avatarStyles;
   }
 }
 
-final List<AvatarStyle> _avatarstyles = [
-  AvatarStyle(
-    styleName: 'MyStyle1',
-    textStyle: TextStyle(),
-  ),
-  AvatarStyle(
-    styleName: 'MyStyle2',
-    textStyle: TextStyle(),
-  ),
-  AvatarStyle(
-    styleName: 'MyStyle3',
-    textStyle: TextStyle(),
-  ),
-];
+final Map<String, AvatarStyle> _avatarStyles = {
+  'MyStyle1': AvatarStyle(),
+  'MyStyle2': AvatarStyle(fontSize: 30.0),
+  'MyStyle3': AvatarStyle(),
+  'MyStyle4': AvatarStyle(),
+  'MyStyle5': AvatarStyle(),
+};
