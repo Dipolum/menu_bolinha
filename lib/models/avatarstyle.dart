@@ -10,6 +10,7 @@ class AvatarStyle {
   final double outerHorizontalPadding;
   final double outerVerticalPadding;
   final double marginBtwnTextAndImage;
+  final bool allLowerCase;
 
   AvatarStyle({
     this.marginBtwnTextAndImage = 0,
@@ -21,5 +22,6 @@ class AvatarStyle {
     this.innerPadding = 9.0,
     this.outerHorizontalPadding = 9.0,
     this.outerVerticalPadding = 9.0,
+    this.allLowerCase = false,
   });
 }

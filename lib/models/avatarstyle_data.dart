@@ -32,7 +32,7 @@ final Map<String, AvatarStyle> _avatarStyles = {
     radius: 32,
     borderRadius: 0,
     textStyle: TextStyle(
-      // fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.bold,
       // fontFamily: 'SourceSansPro',
       fontSize: 14.0,
     ),
@@ -49,6 +49,7 @@ final Map<String, AvatarStyle> _avatarStyles = {
       fontFamily: 'Fira-Mono',
       fontSize: 13.0,
     ),
+    allLowerCase: true,
   ),
   'Snapchat': AvatarStyle(
     outerHorizontalPadding: 6,
@@ -62,6 +63,7 @@ final Map<String, AvatarStyle> _avatarStyles = {
       fontFamily: 'SourceSansPro',
       fontSize: 12.0,
     ),
+    allLowerCase: true,
   ),
   'Dipolum1': AvatarStyle(
     textStyle: TextStyle(
@@ -74,12 +76,13 @@ final Map<String, AvatarStyle> _avatarStyles = {
     radius: 40.0,
     innerPadding: 10.0,
     borderRadius: 5.0,
-    outerHorizontalPadding: 9.5,
+    outerHorizontalPadding: 10,
+    outerVerticalPadding: 7.0,
     borderColor: Colors.deepPurple,
     textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 15.0,
-      fontFamily: 'Fira-Mono',
+      //fontWeight: FontWeight.bold,
+      fontSize: 20.0,
+      fontFamily: 'Pacifico',
     ),
   ),
 };

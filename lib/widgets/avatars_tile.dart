@@ -46,7 +46,7 @@ class AvatarTile extends StatelessWidget {
           ),
           SizedBox(height: avatarStyle.marginBtwnTextAndImage),
           Text(
-            title,
+            avatarStyle.allLowerCase ? title.toLowerCase() : title,
             style: avatarStyle.textStyle,
           ),
         ],

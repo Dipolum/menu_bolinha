@@ -5,7 +5,7 @@ import 'package:tj_carousel_slider/models/avatar.dart';
 class AvatarData extends ChangeNotifier {
   final List<Avatar> avatars = [
     Avatar(
-      title: 'Acessorios',
+      title: 'Acessórios',
       targetUrl:
           'https://store.barnettharley.com/common/images/products/large2/hdn0379-1.jpg',
       image: AssetImage('images/accessories.png'),
@@ -40,18 +40,18 @@ class AvatarData extends ChangeNotifier {
       image: AssetImage('images/ball.png'),
     ),
     Avatar(
-      title: 'Noticias',
+      title: 'Notícias',
       targetUrl: 'https://ak2.picdn.net/shutterstock/videos/217192/thumb/1.jpg',
       image: AssetImage('images/news.png'),
     ),
     Avatar(
-      title: 'Calcados',
+      title: 'Calçados',
       targetUrl:
           'http://getwallpapers.com/wallpaper/full/e/3/c/713142-cool-shoes-hd-wallpapers-1920x1080-1080p.jpg',
       image: AssetImage('images/shoes.png'),
     ),
     Avatar(
-      title: 'Acessorios',
+      title: 'Acessórios',
       targetUrl:
           'https://store.barnettharley.com/common/images/products/large2/hdn0379-1.jpg',
       image: AssetImage('images/accessories.png'),
@@ -86,12 +86,12 @@ class AvatarData extends ChangeNotifier {
       image: AssetImage('images/ball.png'),
     ),
     Avatar(
-      title: 'Noticias',
+      title: 'Notícias',
       targetUrl: 'https://ak2.picdn.net/shutterstock/videos/217192/thumb/1.jpg',
       image: AssetImage('images/news.png'),
     ),
     Avatar(
-      title: 'Calcados',
+      title: 'Calçados',
       targetUrl:
           'http://getwallpapers.com/wallpaper/full/e/3/c/713142-cool-shoes-hd-wallpapers-1920x1080-1080p.jpg',
       image: AssetImage('images/shoes.png'),
