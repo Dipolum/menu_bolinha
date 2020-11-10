@@ -28,7 +28,7 @@ class CarouselsScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 100.0,
+                  height: 150.0,
                   alignment: Alignment.center,
                   padding: EdgeInsets.only(bottom: 20.0),
                   color: Colors.blueGrey,
@@ -59,8 +59,10 @@ CupertinoPicker iOSPicker(BuildContext context) {
     //backgroundColor: Colors.lightBlue,
     itemExtent: 32.0,
     onSelectedItemChanged: (selectedIndex) {
-      //selectedCurrency = coinData.currenciesList[selectedIndex];
-      //updateCoinCards();
+      print(selectedIndex);
+
+      // Provider.of<AvatarStyleData>(context, listen: false)
+      //     .updateSelectedStyleKey(styleDataArray[selectedIndex].styleName);
     },
     children: pickerItems,
   );

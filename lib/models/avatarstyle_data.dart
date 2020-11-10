@@ -3,6 +3,18 @@ import 'package:flutter/rendering.dart';
 import 'package:tj_carousel_slider/models/avatarstyle.dart';
 
 class AvatarStyleData extends ChangeNotifier {
+  String _selectedStyleKey;
+
+  AvatarStyle getAvatarStyle() {
+    return getAvatarStyleData()[_selectedStyleKey];
+  }
+
+  void updateSelectedStyleKey(String selectedStyleKey) {
+    _selectedStyleKey = selectedStyleKey;
+    print(selectedStyleKey);
+    notifyListeners();
+  }
+
   Map<String, AvatarStyle> getAvatarStyleData() {
     Map<String, AvatarStyle> avatarStyleData = {};
 
