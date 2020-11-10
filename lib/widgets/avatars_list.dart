@@ -33,13 +33,3 @@ List<AvatarTile> buildList(BuildContext context) {
   }
   return myAvatars;
 }
-
-// ListView.builder(
-//       scrollDirection: Axis.horizontal,
-//       itemBuilder: (context, index) {
-//         return AvatarTile(
-//           title: Provider.of<AvatarData>(context).avatars[index].title,
-//         );
-//       },
-//       itemCount: Provider.of<AvatarData>(context).avatars.length,
-//     )

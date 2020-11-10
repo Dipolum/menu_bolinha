@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tj_carousel_slider/screens/carousels_screen.dart';
-
 import 'models/avatar_data.dart';
+import 'models/avatarstyle_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +16,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<AvatarData>(
-      create: (context) => AvatarData(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AvatarData>(create: (context) => AvatarData()),
+        ChangeNotifierProvider<AvatarStyleData>(
+            create: (context) => AvatarStyleData()),
+      ],
       child: MaterialApp(
         home: CarouselsScreen(),
       ),

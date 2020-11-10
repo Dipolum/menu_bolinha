@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tj_carousel_slider/models/avatar.dart';
 
 class AvatarData extends ChangeNotifier {
-  List<Avatar> avatars = [
+  final List<Avatar> avatars = [
     Avatar(
       title: 'Esportes',
       targetUrl: 'imgur.com',
