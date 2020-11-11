@@ -22,67 +22,69 @@ class AvatarStyleData extends ChangeNotifier {
   Map<String, AvatarStyle> getAvatarStyleData() {
     return _avatarStyles;
   }
-}
 
-final Map<String, AvatarStyle> _avatarStyles = {
-  'Magalu': AvatarStyle(
-    outerHorizontalPadding: 11,
-    outerVerticalPadding: 9.0,
-    innerPadding: 8.0,
-    radius: 32,
-    borderRadius: 0,
-    textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      // fontFamily: 'SourceSansPro',
-      fontSize: 14.0,
+  final Map<String, AvatarStyle> _avatarStyles = {
+    'Magalu': AvatarStyle(
+      outerHorizontalPadding: 11,
+      outerVerticalPadding: 9.0,
+      innerPadding: 8.0,
+      radius: 32,
+      borderRadius: 0,
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        // fontFamily: 'SourceSansPro',
+        fontSize: 14.0,
+      ),
     ),
-  ),
-  'Instagram': AvatarStyle(
-    outerHorizontalPadding: 9,
-    outerVerticalPadding: 6.0,
-    innerPadding: 5.0,
-    radius: 32,
-    borderRadius: 3,
-    borderColor: Colors.deepOrangeAccent,
-    textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Fira-Mono',
-      fontSize: 13.0,
+    'Instagram': AvatarStyle(
+      outerHorizontalPadding: 9,
+      outerVerticalPadding: 6.0,
+      innerPadding: 5.0,
+      radius: 32,
+      borderRadius: 3,
+      borderColor: Colors.deepOrangeAccent,
+      // secondBorderRadius: 3,
+      // secondBorderColor: Colors.teal,
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Fira-Mono',
+        fontSize: 13.0,
+      ),
+      allLowerCase: true,
     ),
-    allLowerCase: true,
-  ),
-  'Snapchat': AvatarStyle(
-    outerHorizontalPadding: 6,
-    outerVerticalPadding: 6.0,
-    innerPadding: 5.0,
-    radius: 28,
-    borderRadius: 3,
-    borderColor: Colors.deepPurpleAccent,
-    textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontFamily: 'SourceSansPro',
-      fontSize: 12.0,
+    'Snapchat': AvatarStyle(
+      outerHorizontalPadding: 6,
+      outerVerticalPadding: 6.0,
+      innerPadding: 5.0,
+      radius: 28,
+      borderRadius: 3,
+      borderColor: Colors.deepPurpleAccent,
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontFamily: 'SourceSansPro',
+        fontSize: 12.0,
+      ),
+      allLowerCase: true,
     ),
-    allLowerCase: true,
-  ),
-  'Dipolum1': AvatarStyle(
-    textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontFamily: 'Fira-Mono',
+    'Dipolum1': AvatarStyle(
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontFamily: 'Fira-Mono',
+      ),
+      borderColor: Colors.deepPurple,
     ),
-    borderColor: Colors.deepPurple,
-  ),
-  'Dipolum2': AvatarStyle(
-    radius: 40.0,
-    innerPadding: 10.0,
-    borderRadius: 5.0,
-    outerHorizontalPadding: 10,
-    outerVerticalPadding: 7.0,
-    borderColor: Colors.deepPurple,
-    textStyle: TextStyle(
-      //fontWeight: FontWeight.bold,
-      fontSize: 20.0,
-      fontFamily: 'Pacifico',
+    'Dipolum2': AvatarStyle(
+      radius: 40.0,
+      innerPadding: 10.0,
+      borderRadius: 5.0,
+      outerHorizontalPadding: 10,
+      outerVerticalPadding: 7.0,
+      borderColor: Colors.deepPurple,
+      textStyle: TextStyle(
+        //fontWeight: FontWeight.bold,
+        fontSize: 20.0,
+        fontFamily: 'Pacifico',
+      ),
     ),
-  ),
-};
+  };
+}

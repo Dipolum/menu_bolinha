@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
 import 'package:tj_carousel_slider/services/networking.dart';
+import 'package:tj_carousel_slider/services/platform_checker.dart';
 
 class AvatarTile extends StatelessWidget {
   final String title;
@@ -26,17 +27,23 @@ class AvatarTile extends StatelessWidget {
                   horizontal: avatarStyle.outerHorizontalPadding,
                   vertical: avatarStyle.outerVerticalPadding),
               child: CircleAvatar(
-                backgroundColor: avatarStyle.borderColor,
+                backgroundColor: avatarStyle.secondBorderColor,
                 radius: avatarStyle.radius,
                 child: CircleAvatar(
-                  child: Padding(
-                    padding: EdgeInsets.all(avatarStyle.innerPadding),
-                    child: Image(
-                      image: image,
+                  backgroundColor: avatarStyle.borderColor,
+                  radius: avatarStyle.radius - avatarStyle.secondBorderRadius,
+                  child: CircleAvatar(
+                    child: Padding(
+                      padding: EdgeInsets.all(avatarStyle.innerPadding),
+                      child: Image(
+                        image: image,
+                      ),
                     ),
+                    backgroundColor: avatarStyle.backgroundColor,
+                    radius: avatarStyle.radius -
+                        avatarStyle.borderRadius -
+                        avatarStyle.secondBorderRadius,
                   ),
-                  backgroundColor: avatarStyle.backgroundColor,
-                  radius: avatarStyle.radius - avatarStyle.borderRadius,
                 ),
               ),
             ),
