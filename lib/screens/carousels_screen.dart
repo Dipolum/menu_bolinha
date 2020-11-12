@@ -52,30 +52,30 @@ class CarouselsScreen extends StatelessWidget {
                     ),
                   ),
                   MainListView(),
-                  Column(
-                    children: [
-                      Text(
-                        'Estilo do slider',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 40.0,
-                        ),
-                      ),
-                      SizedBox(height: 10.0),
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(20),
-                              topLeft: Radius.circular(20),
-                            ),
-                            color: Colors.blueGrey),
-                        height: 150.0,
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.only(bottom: 20.0),
-                        child: androidDropdown(context),
-                      ),
-                    ],
-                  ),
+                  // Column(
+                  //   children: [
+                  //     Text(
+                  //       'Estilo do slider',
+                  //       style: TextStyle(
+                  //         fontWeight: FontWeight.w700,
+                  //         fontSize: 40.0,
+                  //       ),
+                  //     ),
+                  //     SizedBox(height: 10.0),
+                  //     Container(
+                  //       decoration: BoxDecoration(
+                  //           borderRadius: BorderRadius.only(
+                  //             topRight: Radius.circular(20),
+                  //             topLeft: Radius.circular(20),
+                  //           ),
+                  //           color: Colors.blueGrey),
+                  //       height: 150.0,
+                  //       alignment: Alignment.center,
+                  //       padding: EdgeInsets.only(bottom: 20.0),
+                  //       child: androidDropdown(context),
+                  //     ),
+                  //   ],
+                  // ),
                 ],
               ),
             ),
