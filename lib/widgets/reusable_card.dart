@@ -23,20 +23,22 @@ class ReusableCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPress,
-      child: Container(
-        padding: EdgeInsets.symmetric(
-            horizontal: horizontalPadding, vertical: verticalPadding),
+    return Container(
+      padding: EdgeInsets.symmetric(
+          horizontal: horizontalPadding, vertical: verticalPadding),
+      child: InkWell(
+        onTap: () {
+          print('abc123213');
+        },
         child: cardChild,
-        margin: EdgeInsets.symmetric(
-          horizontal: horizontalMargin,
-          vertical: verticalMargin,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(cardBorderRadius),
-          color: colour,
-        ),
+      ),
+      margin: EdgeInsets.symmetric(
+        horizontal: horizontalMargin,
+        vertical: verticalMargin,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(cardBorderRadius),
+        color: colour,
       ),
     );
   }

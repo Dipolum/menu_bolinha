@@ -55,7 +55,7 @@ class CarouselsScreen extends StatelessWidget {
                         ),
                         TopCard(
                           leading: Icons.pin_drop_outlined,
-                          title: 'Ver ofertas para minha regiao',
+                          title: 'Ver ofertas para minha região',
                           trailing: Icons.arrow_right,
                           verticalPadding: 2,
                         )

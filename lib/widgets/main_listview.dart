@@ -42,21 +42,24 @@ List<Widget> _mainListView = [
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15.0),
     ),
-    child: Padding(
-      padding: const EdgeInsets.only(bottom: 6.0, top: 3.0),
-      child: ListTile(
-        title: Text(
-          'Como funcionam as promocoes incriveis no Toritama',
-          style: TextStyle(
-            fontSize: 22.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.grey[600],
+    child: InkWell(
+      onTap: () {},
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 6.0, top: 3.0),
+        child: ListTile(
+          title: Text(
+            'Como funcionam as promoções incríveis no Toritama',
+            style: TextStyle(
+              fontSize: 22.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey[600],
+            ),
+            textAlign: TextAlign.left,
           ),
-          textAlign: TextAlign.left,
-        ),
-        trailing: Icon(
-          Icons.arrow_right,
-          size: 30.0,
+          trailing: Icon(
+            Icons.arrow_right,
+            size: 30.0,
+          ),
         ),
       ),
     ),
@@ -97,7 +100,7 @@ List<Widget> _mainListView = [
       Align(
         alignment: Alignment.center,
         child: Text(
-          'Olha so o que selecionamos pra voce:',
+          'Olha só o que selecionamos para você:',
           style: TextStyle(
               fontSize: 19.0,
               color: Colors.grey[700],

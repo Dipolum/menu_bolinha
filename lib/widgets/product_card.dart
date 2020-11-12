@@ -24,7 +24,7 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Tenis tamanho 36, bonito e confortavel',
+                    'Tênis tamanho 36, bonito e confortável',
                     style: TextStyle(
                         color: Colors.grey[700],
                         fontWeight: FontWeight.bold,
