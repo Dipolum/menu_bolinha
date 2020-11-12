@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
+import 'package:tj_carousel_slider/screens/slider_picker_screen.dart';
 import 'package:tj_carousel_slider/services/platform_checker.dart';
-import 'package:tj_carousel_slider/widgets/android_dropdown.dart';
-
 import 'package:tj_carousel_slider/widgets/main_listview.dart';
-import 'package:tj_carousel_slider/widgets/reusable_card.dart';
 import 'package:tj_carousel_slider/widgets/top_card.dart';
 
 class CarouselsScreen extends StatelessWidget {
@@ -14,6 +10,21 @@ class CarouselsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlatformChecker(context).isPhone()
         ? Scaffold(
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  builder: (context) => SingleChildScrollView(
+                    child: SliderStylePicker(),
+                  ),
+                );
+              },
+              child: Icon(
+                Icons.add,
+                size: 35,
+              ),
+            ),
             // appBar: AppBar(
             //   title: Text('Toritama Jeans slider display'),
             //   backgroundColor: Colors.blueGrey,
@@ -52,30 +63,6 @@ class CarouselsScreen extends StatelessWidget {
                     ),
                   ),
                   MainListView(),
-                  // Column(
-                  //   children: [
-                  //     Text(
-                  //       'Estilo do slider',
-                  //       style: TextStyle(
-                  //         fontWeight: FontWeight.w700,
-                  //         fontSize: 40.0,
-                  //       ),
-                  //     ),
-                  //     SizedBox(height: 10.0),
-                  //     Container(
-                  //       decoration: BoxDecoration(
-                  //           borderRadius: BorderRadius.only(
-                  //             topRight: Radius.circular(20),
-                  //             topLeft: Radius.circular(20),
-                  //           ),
-                  //           color: Colors.blueGrey),
-                  //       height: 150.0,
-                  //       alignment: Alignment.center,
-                  //       padding: EdgeInsets.only(bottom: 20.0),
-                  //       child: androidDropdown(context),
-                  //     ),
-                  //   ],
-                  // ),
                 ],
               ),
             ),
