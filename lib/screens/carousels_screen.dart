@@ -48,10 +48,14 @@ class CarouselsScreen extends StatelessWidget {
                             print('abc');
                           },
                         ),
-                        Divider(
-                          height: 4,
-                          thickness: 4,
-                          color: Colors.blueGrey,
+                        Container(
+                          height: 2,
+                          width: double.infinity,
+                          //color: Colors.blueGrey,
+                          child: FittedBox(
+                            child: Image.asset('images/rainbowgradient.jpeg'),
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         TopCard(
                           leading: Icons.pin_drop_outlined,

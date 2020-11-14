@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tj_carousel_slider/models/avatarstyle_data.dart';
 import 'package:tj_carousel_slider/services/networking.dart';
-import 'package:tj_carousel_slider/services/platform_checker.dart';
 
 class AvatarTile extends StatelessWidget {
   final String title;
@@ -26,26 +25,57 @@ class AvatarTile extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: avatarStyle.outerHorizontalPadding,
                   vertical: avatarStyle.outerVerticalPadding),
-              child: CircleAvatar(
-                backgroundColor: avatarStyle.secondBorderColor,
-                radius: avatarStyle.radius,
-                child: CircleAvatar(
-                  backgroundColor: avatarStyle.borderColor,
-                  radius: avatarStyle.radius - avatarStyle.secondBorderRadius,
-                  child: CircleAvatar(
-                    child: Padding(
-                      padding: EdgeInsets.all(avatarStyle.innerPadding),
-                      child: Image(
-                        image: image,
+              child: (avatarStyle.backgroundImage == null)
+                  ? CircleAvatar(
+                      backgroundColor: avatarStyle.secondBorderColor,
+                      radius: avatarStyle.radius,
+                      child: CircleAvatar(
+                        backgroundColor: avatarStyle.borderColor,
+                        radius:
+                            avatarStyle.radius - avatarStyle.secondBorderRadius,
+                        child: CircleAvatar(
+                          child: Padding(
+                            padding: EdgeInsets.all(avatarStyle.innerPadding),
+                            child: Image(
+                              image: image,
+                            ),
+                          ),
+                          backgroundColor: avatarStyle.backgroundColor,
+                          radius: avatarStyle.radius -
+                              avatarStyle.borderRadius -
+                              avatarStyle.secondBorderRadius,
+                        ),
                       ),
+                    )
+                  : Stack(
+                      children: [
+                        ClipOval(
+                            child: Image(
+                          image: avatarStyle.backgroundImage,
+                          fit: BoxFit.cover,
+                          width: avatarStyle.radius * 2,
+                          height: avatarStyle.radius * 2,
+                        )),
+                        Align(
+                          child: Padding(
+                            padding: EdgeInsets.all(avatarStyle.borderRadius),
+                            child: CircleAvatar(
+                              child: Padding(
+                                padding:
+                                    EdgeInsets.all(avatarStyle.innerPadding),
+                                child: Image(
+                                  image: image,
+                                ),
+                              ),
+                              backgroundColor: avatarStyle.backgroundColor,
+                              radius: avatarStyle.radius -
+                                  avatarStyle.borderRadius -
+                                  avatarStyle.secondBorderRadius,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                    backgroundColor: avatarStyle.backgroundColor,
-                    radius: avatarStyle.radius -
-                        avatarStyle.borderRadius -
-                        avatarStyle.secondBorderRadius,
-                  ),
-                ),
-              ),
             ),
             onTap: () {
               NetworkHelper(url: url).launchURL();

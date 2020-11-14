@@ -13,8 +13,10 @@ class AvatarStyle {
   final double outerVerticalPadding;
   final double marginBtwnTextAndImage;
   final bool allLowerCase;
+  final AssetImage backgroundImage;
 
   AvatarStyle({
+    this.backgroundImage,
     this.secondBorderRadius = 0.0,
     this.secondBorderColor = Colors.black,
     this.marginBtwnTextAndImage = 0,

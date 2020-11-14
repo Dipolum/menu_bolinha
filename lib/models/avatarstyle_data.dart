@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tj_carousel_slider/models/avatarstyle.dart';
 
 class AvatarStyleData extends ChangeNotifier {
-  String _selectedStyleKey = 'Magalu';
+  String _selectedStyleKey = 'Colorido1';
 
   AvatarStyle getAvatarStyle() {
     return getAvatarStyleData()[_selectedStyleKey];
@@ -24,6 +24,38 @@ class AvatarStyleData extends ChangeNotifier {
   }
 
   final Map<String, AvatarStyle> _avatarStyles = {
+    'Colorido1': AvatarStyle(
+      radius: 40.0,
+      innerPadding: 10.0,
+      borderRadius: 8.0,
+      //secondBorderRadius: 5,
+      outerHorizontalPadding: 10,
+      outerVerticalPadding: 7.0,
+      borderColor: Color(0xFFcfaa76),
+      //secondBorderColor: Colors.red,
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 15.0,
+        fontFamily: 'Fira-Mono',
+      ),
+      backgroundImage: AssetImage('images/gradient2.jpeg'),
+    ),
+    'Colorido2': AvatarStyle(
+      radius: 38.0,
+      innerPadding: 10.0,
+      borderRadius: 5.0,
+      //secondBorderRadius: 5,
+      outerHorizontalPadding: 10,
+      outerVerticalPadding: 7.0,
+      borderColor: Color(0xFFcfaa76),
+      //secondBorderColor: Colors.red,
+      textStyle: TextStyle(
+        //fontWeight: FontWeight.bold,
+        fontSize: 18.0,
+        fontFamily: 'Pacifico',
+      ),
+      backgroundImage: AssetImage('images/gradient1.jpeg'),
+    ),
     'Magalu': AvatarStyle(
       outerHorizontalPadding: 11,
       outerVerticalPadding: 9.0,
@@ -85,6 +117,38 @@ class AvatarStyleData extends ChangeNotifier {
         fontSize: 20.0,
         fontFamily: 'Pacifico',
       ),
+    ),
+    'Madeira1': AvatarStyle(
+      radius: 40.0,
+      innerPadding: 10.0,
+      borderRadius: 8.0,
+      //secondBorderRadius: 5,
+      outerHorizontalPadding: 10,
+      outerVerticalPadding: 7.0,
+      borderColor: Color(0xFFcfaa76),
+      //secondBorderColor: Colors.red,
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+        fontFamily: 'SourceSansPro',
+      ),
+      backgroundImage: AssetImage('images/madeira1.jpeg'),
+    ),
+    'Madeira2': AvatarStyle(
+      radius: 40.0,
+      innerPadding: 10.0,
+      borderRadius: 8.0,
+      //secondBorderRadius: 5,
+      outerHorizontalPadding: 10,
+      outerVerticalPadding: 7.0,
+      borderColor: Color(0xFFcfaa76),
+      //secondBorderColor: Colors.red,
+      textStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+        fontFamily: 'SourceSansPro',
+      ),
+      backgroundImage: AssetImage('images/madeira2.jpeg'),
     ),
   };
 }
