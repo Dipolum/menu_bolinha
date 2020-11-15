@@ -8,7 +8,7 @@ import 'package:tj_carousel_slider/widgets/top_card.dart';
 class CarouselsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return PlatformChecker(context).isPhone()
+    return true // use the platformer checker here to prevent it from being accessed from certain aspect ratios
         ? Scaffold(
             floatingActionButton: FloatingActionButton(
               onPressed: () {
