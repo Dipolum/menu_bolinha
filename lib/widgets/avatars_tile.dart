@@ -23,8 +23,7 @@ class AvatarTile extends StatelessWidget {
           GestureDetector(
             child: Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: avatarStyle.outerHorizontalPadding,
-                  vertical: avatarStyle.outerVerticalPadding),
+                  horizontal: avatarStyle.outerHorizontalPadding, vertical: 0),
               child: (avatarStyle.backgroundImage == null)
                   ? CircleAvatar(
                       backgroundColor: avatarStyle.secondBorderColor,

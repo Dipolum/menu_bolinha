@@ -78,7 +78,7 @@ List<Widget> _mainListView = [
     cardChild: ClipRRect(
       borderRadius: BorderRadius.circular(30),
       child: Image(
-        image: AssetImage('images/ofertas.png'),
+        image: AssetImage('images/sales60.png'),
       ),
     ),
   ),
@@ -87,7 +87,7 @@ List<Widget> _mainListView = [
     cardChild: ClipRRect(
       borderRadius: BorderRadius.circular(30),
       child: Image(
-        image: AssetImage('images/ofertas.png'),
+        image: AssetImage('images/sales50.png'),
       ),
     ),
   ),

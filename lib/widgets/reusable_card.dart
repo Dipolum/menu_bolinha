@@ -27,9 +27,7 @@ class ReusableCard extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           horizontal: horizontalPadding, vertical: verticalPadding),
       child: InkWell(
-        onTap: () {
-          print('abc123213');
-        },
+        onTap: onPress,
         child: cardChild,
       ),
       margin: EdgeInsets.symmetric(

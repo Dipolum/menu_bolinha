@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tj_carousel_slider/screens/carousels_screen.dart';
+
 import 'models/avatar_data.dart';
 import 'models/avatarstyle_data.dart';
 import 'models/major_banner_data.dart';
@@ -26,8 +27,12 @@ class _MyAppState extends State<MyApp> {
             create: (context) => MajorBannerData()),
       ],
       child: MaterialApp(
-        home: CarouselsScreen(),
         theme: ThemeData(fontFamily: 'SourceSansPro'),
+        initialRoute: CarouselsScreen.id,
+        routes: {
+          CarouselsScreen.id: (context) => CarouselsScreen(),
+          //AppBarSearchExample.id: (context) => AppBarSearchExample(),
+        },
       ),
     );
   }

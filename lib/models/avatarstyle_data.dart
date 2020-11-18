@@ -25,7 +25,7 @@ class AvatarStyleData extends ChangeNotifier {
 
   final Map<String, AvatarStyle> _avatarStyles = {
     'Colorido1': AvatarStyle(
-      radius: 40.0,
+      radius: 42.0,
       innerPadding: 10.0,
       borderRadius: 8.0,
       //secondBorderRadius: 5,
