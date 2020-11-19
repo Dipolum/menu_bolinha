@@ -4,7 +4,6 @@ import 'package:tj_carousel_slider/screens/carousels_screen.dart';
 
 import 'models/avatar_data.dart';
 import 'models/avatarstyle_data.dart';
-import 'models/major_banner_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,8 +22,6 @@ class _MyAppState extends State<MyApp> {
         ChangeNotifierProvider<AvatarData>(create: (context) => AvatarData()),
         ChangeNotifierProvider<AvatarStyleData>(
             create: (context) => AvatarStyleData()),
-        ChangeNotifierProvider<MajorBannerData>(
-            create: (context) => MajorBannerData()),
       ],
       child: MaterialApp(
         theme: ThemeData(fontFamily: 'SourceSansPro'),
