@@ -8,7 +8,7 @@ class NetworkHelper {
 
   launchURL() async {
     if (await canLaunch(url)) {
-      await launch(url, forceWebView: true, enableJavaScript: true);
+      await launch(url);
     } else {
       print('could not launch url');
     }
